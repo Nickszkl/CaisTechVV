@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>VerdeVivo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>VerdeVivo</title>
 </head>
 <body>
 
-    <!-- Barra de navegação -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="contato.html">Denuncia</a></li>
-        </ul>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo-nav">VerdeVivo</div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <ul class="menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="cursos.html">Cursos</a></li>
+    <li><a href="noticias.html">Notícias</a></li>
+    <li><a href="contato.html">Denúncia</a></li>
+  </ul>
+</nav>
 
-    <!-- Apresentação -->
-    <section class="apresentacao">
-        <!-- Imagem PNG sem fundo -->
-        <img src="fundo.jpg" alt="VerdeVivo" class="top-img">
+<!-- Apresentação -->
+<section class="apresentacao">
+  <img src="fundo.jpg" alt="Fundo" class="top-img">
+  <div class="conteudo">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <div class="nome-site">VerdeVivo</div>
+    <div class="legenda">Cuidando do futuro, hoje.</div>
+  </div>
+</section>
 
-        <div class="conteudo">
-            <!-- Símbolo do site -->
-            <img src="logo.jpg" alt="Logo" class="logo">
-
-            <!-- Nome do site -->
-            <div class="VerdeVivo">VerdeVivo</div>
-
-            <!-- Legenda -->
-            <div class="legenda">Legenda</div>
-        </div>
-    </section>
+<!-- Notícias -->
 <section class="section-noticias">
   <h2>📰 Últimas Notícias Ambientais</h2>
-  <p>Fique por dentro das novidades, avanços e desafios do meio ambiente.</p>
+  <p>Fique por dentro das novidades e desafios do meio ambiente.</p>
 
   <div class="noticias-cards">
+    <!-- Notícia 1 -->
     <div class="card-noticia">
       <img src="https://s2-g1.glbimg.com/4_QM9aaJ5Uv-5uKzhD6EBJPLHQo=/0x0:4413x2942/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/8/U/gp8BsATSGoTFqDZs31SA/ap24156119730800.jpg" alt="Notícia">
-      <h3>Temperaturas recordes devem persistir nos próximos cinco anos, alerta novo relatório climático</h3>
-      <p>Relatório aponta que o planeta pode ultrapassar 1,5°C nos próximos anos.</p>
-      <a href="https://g1.globo.com/meio-ambiente/noticia/2025/05/28/temperaturas-recordes-devem-persistir-nos-proximos-cinco-anos-alerta-novo-relatorio-climatico.ghtml">Ler Mais</a>
+      <h3>Temperaturas recordes devem persistir</h3>
+      <p>Planeta pode ultrapassar 1,5°C nos próximos anos.</p>
+      <a href="#">Ler Mais</a>
     </div>
 
+    <!-- Notícia 2 -->
     <div class="card-noticia">
       <img src="https://amda.org.br/wp-content/uploads/2023/12/Brasil_bate_recorde_na_reciclagem_de_latinhas.jpg" alt="Notícia">
-      <h3>Brasil bate recorde de reciclagem de alumínio</h3>
-      <p>Iniciativas locais e cooperativas impulsionam os índices nacionais.</p>
-      <a href="https://amda.org.br/noticias/6510-brasil-bate-recorde-na-reciclagem-de-latinhas/">Ler Mais</a>
+      <h3>Brasil bate recorde na reciclagem de alumínio</h3>
+      <p>Iniciativas locais impulsionam os índices nacionais.</p>
+      <a href="#">Ler Mais</a>
     </div>
 
+    <!-- Notícia 3 -->
     <div class="card-noticia">
       <img src="https://imagens.ebc.com.br/YkocGNabjrmZlbw5adkYzYOhRZM=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/08/desmatamento-em-labrea-municipio-do-sul-do-amazonas-foto-victor-moriyama-amazonia-em-chamas-2021-2.jpg?itok=3M_78coT" alt="Notícia">
-      <h3>Desmatamento na Amazônia reduz 30% em 2024</h3>
-      <p>Nova política ambiental mostra resultados positivos no bioma.</p>
-      <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/meio-ambiente/audio/2025-05/desmatamento-cai-30-no-brasil-em-2024-mostra-mapbiomas#:~:text=O%20desmatamento%20caiu%2030%25%20no,1%2C8%20milh%C3%A3o%20em%202023.">Ler Mais</a>
+      <h3>Desmatamento na Amazônia reduz 30%</h3>
+      <p>Nova política ambiental mostra resultados positivos.</p>
+      <a href="#">Ler Mais</a>
     </div>
   </div>
 </section>
+
+<!-- Acesso Rápido -->
 <section class="section-acesso-rapido">
   <h2>🚀 Acesso Rápido</h2>
-  <p>Encontre facilmente as principais funcionalidades do VerdeVivo.</p>
+  <p>Encontre facilmente as principais funcionalidades.</p>
 
   <div class="acesso-cards">
-    <!-- Card 2 -->
     <div class="card-acesso">
       <img src="https://img.icons8.com/color/96/classroom.png" alt="Cursos">
       <h3>Educação Ambiental</h3>
@@ -75,11 +77,10 @@
       <a href="cursos.html">Acessar</a>
     </div>
 
-    <!-- Card 3 -->
     <div class="card-acesso">
       <img src="https://img.icons8.com/color/96/error.png" alt="Denúncia">
       <h3>Denúncia Ambiental</h3>
-      <p>Reporte crimes ambientais diretamente para os órgãos competentes.</p>
+      <p>Reporte crimes ambientais aos órgãos competentes.</p>
       <a href="contato.html">Acessar</a>
     </div>
   </div>
