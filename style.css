@@ -307,3 +307,76 @@ body {
     align-items: center;
   }
 }
+/* ===== Botão de Modo Escuro ===== */
+.dark-mode-btn {
+  background: none;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark-mode-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* ===== Estilo para Modo Escuro ===== */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .menu {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .menu li a {
+  color: white;
+}
+
+body.dark-mode .menu li a:hover {
+  color: #28c228;
+}
+
+body.dark-mode .apresentacao {
+  background: linear-gradient(270deg, #0d4c34, #092d1d, #05150e);
+}
+
+body.dark-mode .section-noticias,
+body.dark-mode .section-acesso-rapido {
+  background: #1a1a1a;
+}
+
+body.dark-mode .card-noticia,
+body.dark-mode .card-acesso {
+  background: #262626;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .card-noticia h3,
+body.dark-mode .card-acesso h3 {
+  color: #28c228;
+}
+
+body.dark-mode .card-noticia p,
+body.dark-mode .card-acesso p {
+  color: #cccccc;
+}
+
+body.dark-mode .card-noticia a,
+body.dark-mode .card-acesso a {
+  background-color: #28c228;
+}
+
+body.dark-mode .card-noticia a:hover,
+body.dark-mode .card-acesso a:hover {
+  background-color: #1e7f1e;
+}
