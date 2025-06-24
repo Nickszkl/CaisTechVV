@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerdeVivo | Denúncia Ambiental</title>
+  <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contato.html">Denuncia</a></li>
+        </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header class="header-pagina">
+    <div class="header-conteudo">
+      <h1>🚨 Denúncia Ambiental</h1>
+      <p>Presenciou algum crime ambiental? Nos ajude a proteger o meio ambiente. Sua denúncia é anônima e muito importante!</p>
+    </div>
+  </header>
+
+  <!-- Formulário -->
+  <main class="conteudo-pagina">
+    <section class="section-denuncia">
+      <form class="form-denuncia" action="https://formspree.io/f/myzwqoon" method="POST" enctype="multipart/form-data">
+
+        <div class="campo">
+          <label for="nome">Nome (opcional)</label>
+          <input type="text" name="Nome" id="nome" placeholder="Seu nome">
+        </div>
+
+        <div class="campo">
+          <label for="email">Email (opcional)</label>
+          <input type="email" name="Email" id="email" placeholder="Seu e-mail">
+        </div>
+
+        <div class="campo">
+          <label for="tipo">Tipo de Crime Ambiental *</label>
+          <select name="Tipo de Crime" id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="Desmatamento">Desmatamento</option>
+            <option value="Queimadas">Queimadas</option>
+            <option value="Poluição">Poluição</option>
+            <option value="Descarte Irregular">Descarte Irregular</option>
+            <option value="Maus Tratos a Animais">Maus Tratos a Animais</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="local">Local do Ocorrido *</label>
+          <input type="text" name="Local" id="local" placeholder="Endereço, cidade, ponto de referência..." required>
+        </div>
+
+        <div class="campo">
+          <label for="descricao">Descrição *</label>
+          <textarea name="Descrição" id="descricao" rows="6" placeholder="Descreva o que aconteceu..." required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="arquivo">Anexar Foto ou Vídeo (opcional)</label>
+          <input type="file" name="Anexo" id="arquivo" accept="image/*,video/*">
+        </div>
+
+        <button type="submit" class="botao-denuncia">Enviar Denúncia</button>
+
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
