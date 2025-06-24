@@ -1,4 +1,4 @@
-/* ===== Reset ===== */
+/* ===== Reset Básico ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +7,12 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e9f5ec, #f6fbf8);
+  color: #224422;
   overflow-x: hidden;
 }
 
-/* ===== Navbar ===== */
+/* ================= NAVBAR ================= */
 .navbar {
   background-color: #28c228;
   padding: 20px;
@@ -45,7 +47,7 @@ body {
   color: #c5f2c5;
 }
 
-/* ===== Menu Hamburguer ===== */
+/* ==== Menu Hamburguer ==== */
 .menu-icon {
   display: none;
   font-size: 28px;
@@ -57,19 +59,30 @@ body {
   display: none;
 }
 
-#menu-toggle:checked ~ .menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background-color: #28c228;
-  padding: 20px;
-  border-radius: 10px;
-  gap: 20px;
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #28c228;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
 
-/* ===== Apresentação ===== */
+/* ================= APRESENTAÇÃO ================= */
 .apresentacao {
   background: linear-gradient(270deg, #5dc088, #13eb74, #037434);
   background-size: 600% 600%;
@@ -90,9 +103,10 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-.apresentacao .top-img {
+.top-img {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -120,17 +134,6 @@ body {
   color: #e0ffe0;
 }
 
-/* ===== Responsivo Navbar ===== */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
-
-/* ===== Responsivo Geral ===== */
 @media (max-width: 600px) {
   .nome-site {
     font-size: 2rem;
@@ -139,275 +142,8 @@ body {
     width: 70px;
   }
 }
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Navbar */
-        nav {
-            background-color: #28c228;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #c5f2c5;
-            transform: scale(1.1);
-        }
-
-        /* Animação de fundo */
-        .apresentacao {
-            background: linear-gradient(270deg, #5dc088, #13eb74, #037434);
-            background-size: 600% 600%;
-            animation: fundoAnimado 15s ease infinite;
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        @keyframes fundoAnimado {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .apresentacao img.top-img {
-            position: absolute;
-            top: -100px;
-            width: 1540px;
-            object-fit: cover; 
-            z-index: 1;
-            opacity: 0;
-            animation: fadeIn 2s ease forwards;
-        }
-
-        .conteudo {
-            z-index: 1;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 2s ease forwards;
-            animation-delay: 1s;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 10px;
-            animation: pulse 2s ease-in-out infinite;
-            border-radius: 10px;
-        }
-
-        .nome-site {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .legenda {
-            font-size: 1.1rem;
-            color: #e0ffe0;
-        }
-
-        /* Animações */
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .apresentacao img.top-img {
-                width: 150px;
-                top: 20px;
-            }
-
-            .logo {
-                width: 60px;
-                height: 60px;
-            }
-
-            .nome-site {
-                font-size: 2rem;
-            }
-        }
-        /* ======== Reset básico ======== */
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            }
-
-            /* ======== Fonte ======== */
-            body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #e9f5ec, #f6fbf8);
-            color: #224422;
-            }
-
-            /* ======== Section Principal ======== */
-            .section-coleta {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(to right, #dfffe2, #f9fff9);
-            }
-
-            /* ======== Títulos ======== */
-            .section-coleta h2 {
-            font-size: 42px;
-            color: #14532d;
-            margin-bottom: 16px;
-            animation: fadeInDown 1s ease forwards;
-            }
-
-            .section-coleta p {
-            font-size: 18px;
-            color: #14532d;
-            margin-bottom: 50px;
-            animation: fadeIn 2s ease forwards;
-            }
-
-            /* ======== Container dos Cards ======== */
-            .coleta-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            }
-
-            /* ======== Card Individual ======== */
-            .card {
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 300px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            }
-
-            .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
-            }
-
-            .card img {
-            width: 90px;
-            margin-bottom: 20px;
-            transition: transform 0.6s ease;
-            }
-
-            .card:hover img {
-            transform: rotate(10deg) scale(1.1);
-            }
-
-            .card h3 {
-            font-size: 24px;
-            color: #166534;
-            margin-bottom: 10px;
-            }
-
-            .card p {
-            font-size: 16px;
-            color: #3f6f4c;
-            margin-bottom: 20px;
-            }
-
-            /* ======== Botão ======== */
-            .card a {
-            display: inline-block;
-            background-color: #15803d;
-            color: #fff;
-            padding: 10px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .card a:hover {
-            background-color: #166534;
-            box-shadow: 0 8px 18px rgba(0, 128, 0, 0.3);
-            }
-
-            /* ======== Animações ======== */
-            @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            }
-
-            @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-            }
-
-            /* ======== Responsivo ======== */
-            @media (max-width: 768px) {
-            .coleta-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .section-coleta h2 {
-                font-size: 32px;
-            }
-            }
-            /* ====== Seção Notícias ====== */
+/* ================= NOTÍCIAS ================= */
 .section-noticias {
   padding: 80px 20px;
   background: linear-gradient(to right, #e8f5e9, #f4fff7);
@@ -418,17 +154,14 @@ body {
   font-size: 40px;
   color: #14532d;
   margin-bottom: 16px;
-  animation: fadeInDown 1s ease forwards;
 }
 
 .section-noticias p {
   font-size: 18px;
   color: #14532d;
   margin-bottom: 50px;
-  animation: fadeIn 2s ease forwards;
 }
 
-/* ====== Cards de Notícias ====== */
 .noticias-cards {
   display: flex;
   flex-wrap: wrap;
@@ -483,7 +216,8 @@ body {
 .card-noticia a:hover {
   background-color: #166534;
 }
-/* ======= Seção Acesso Rápido ======= */
+
+/* ================= ACESSO RÁPIDO ================= */
 .section-acesso-rapido {
   padding: 80px 20px;
   background: linear-gradient(to right, #e8f5e9, #f4fff7);
@@ -494,17 +228,14 @@ body {
   font-size: 40px;
   color: #14532d;
   margin-bottom: 16px;
-  animation: fadeInDown 1s ease forwards;
 }
 
 .section-acesso-rapido p {
   font-size: 18px;
   color: #14532d;
   margin-bottom: 50px;
-  animation: fadeIn 2s ease forwards;
 }
 
-/* ======= Cards de Acesso ======= */
 .acesso-cards {
   display: flex;
   flex-wrap: wrap;
@@ -565,9 +296,13 @@ body {
   box-shadow: 0 8px 18px rgba(0, 128, 0, 0.3);
 }
 
-/* ======= Responsivo ======= */
+/* ================= RESPONSIVO ACESSO ================= */
 @media (max-width: 768px) {
   .acesso-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .noticias-cards {
     flex-direction: column;
     align-items: center;
   }
